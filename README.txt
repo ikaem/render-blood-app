@@ -50,5 +50,10 @@ TODO - get access to
 1. what is that map showing?
 - locations of places to donate blod in the city?
 
-...
+... TODO 
 1. create folder structure for getting data 
+
+... NEXT 
+1. FINISH HTTP WRAPPER 
+2. SETUP JSON SERVER REPO FOR BLOOD SUPPLIES  
+3. CREATE PROVIDER, SERVICE, MODELS, CONTROLLERS, STATE FOR BLOOD SUPPLIES
