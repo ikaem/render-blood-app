@@ -26,23 +26,6 @@ export const generateHttpRequestConfig = ({
     ...contentType,
   };
 
-  const typed: AxiosRequestConfig = {
-    method: normalizedMethod,
-    url,
-    params,
-    headers,
-    data,
-  };
-
-  // const test: string = await axios(typed);
-
-  // return {
-  //   url,
-  //   method: normalizedMethod,
-  //   params,
-  //   data,
-  // };
-
   return {
     method: normalizedMethod,
     url,

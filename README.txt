@@ -54,6 +54,13 @@ TODO - get access to
 1. create folder structure for getting data 
 
 ... NEXT 
-1. FINISH HTTP WRAPPER 
 2. SETUP JSON SERVER REPO FOR BLOOD SUPPLIES  
 3. CREATE PROVIDER, SERVICE, MODELS, CONTROLLERS, STATE FOR BLOOD SUPPLIES
+4. create home page 
+- use ssg with regeneration every 24 hours 
+- call service from get static props 
+- type get staic props, so can infer types in component props
+5. use ssr for subscribe page 
+- for avoiding potentual issues with future auth
+- create feature for subscribe 
+- ui service there would be a hook again, to subscribe - same shape as that hook with state in blood supplies

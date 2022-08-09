@@ -1,0 +1,32 @@
+{
+  "blood-supplies": [
+    {
+      "city": "Zagreb",
+      "bloodLevels": 7
+    },
+    {
+      "city": "Rijeka",
+      "bloodLevels": 4
+    },
+    {
+      "city": "Pula",
+      "bloodLevels": 1
+    },
+    {
+      "city": "Osije",
+      "bloodLevels": 3
+    },
+    {
+      "city": "Split",
+      "bloodLevels": 6
+    },
+    {
+      "city": "Zadar",
+      "bloodLevels": 9
+    },
+    {
+      "city": "Dubrovnik",
+      "bloodLevels": 2
+    }
+  ]
+}
