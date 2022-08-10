@@ -7,7 +7,23 @@ class BloodSupplyApiService {
   ) {}
 
   getAllBloodSupplies = async () => {
-    return await this.bloodSuppliesRepositoryProvider.getAll();
+    try {
+      const data = await this.bloodSuppliesRepositoryProvider.getAll();
+
+      return {
+        ok: true,
+        value: data,
+      };
+    } catch (e) {
+      // LOG ERRORS HERE
+      // console.log(e);
+      console.log(e.message);
+
+      return {
+        ok: false,
+        value: [],
+      };
+    }
   };
 }
 

@@ -49,6 +49,7 @@ TODO - get access to
 # questions 
 1. what is that map showing?
 - locations of places to donate blod in the city?
+- how to handle errors in get static props 
 
 ... TODO 
 1. create folder structure for getting data 

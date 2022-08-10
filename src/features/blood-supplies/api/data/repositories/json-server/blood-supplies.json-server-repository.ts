@@ -6,7 +6,7 @@ import { BloodSuppliesRepository } from '../../blood-supplies.repository';
 
 class BloodSuppliesJsonServerRepository implements BloodSuppliesRepository {
   getAll = async (): Promise<BloodSupply[]> => {
-    const url = `${SERVER_URL}/blood-suplies`;
+    const url = `${SERVER_URL}/blood-supplies`;
     const requestConfig = generateHttpRequestConfig({
       url,
       method: 'get',

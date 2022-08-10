@@ -1,4 +1,10 @@
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
+import {
+  GetServerSideProps,
+  GetStaticProps,
+  InferGetServerSidePropsType,
+  InferGetStaticPropsType,
+  NextPage,
+} from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { bloodSupplyApiService } from '../features/blood-supplies/api/api-services/blood-supply.api-service';
@@ -6,12 +12,12 @@ import { bloodSuppliesRepositoryProvider } from '../features/blood-supplies/api/
 import { BloodSupply } from '../features/blood-supplies/models/bloor-supply';
 import styles from '../styles/Home.module.css';
 
-type HomePageProps = InferGetStaticPropsType<typeof getStaticProps>;
+type HomePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 const HomePage: NextPage<HomePageProps> = ({ isError, data }) => {
   return (
     <div>
-      <h1>Home page</h1>
+      <h1>Subscribe page</h1>
       <ul>
         {data.map((d) => {
           return (
@@ -31,7 +37,7 @@ const HomePage: NextPage<HomePageProps> = ({ isError, data }) => {
 
 export default HomePage;
 
-export const getStaticProps: GetStaticProps<{
+export const getServerSideProps: GetServerSideProps<{
   data: BloodSupply[];
   isError: boolean;
 }> = async () => {
@@ -51,7 +57,5 @@ export const getStaticProps: GetStaticProps<{
 
   return {
     props,
-    revalidate: 12 * 60 * 60,
-    // revalidate: 1,
   };
 };
