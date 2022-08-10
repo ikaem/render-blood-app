@@ -12,9 +12,11 @@ import { bloodSuppliesRepositoryProvider } from '../features/blood-supplies/api/
 import { BloodSupply } from '../features/blood-supplies/models/bloor-supply';
 import styles from '../styles/Home.module.css';
 
-type HomePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
+type SubscribePageProps = InferGetServerSidePropsType<
+  typeof getServerSideProps
+>;
 
-const HomePage: NextPage<HomePageProps> = ({ isError, data }) => {
+const SubscribePage: NextPage<SubscribePageProps> = ({ isError, data }) => {
   return (
     <div>
       <h1>Subscribe page</h1>
@@ -35,7 +37,7 @@ const HomePage: NextPage<HomePageProps> = ({ isError, data }) => {
   );
 };
 
-export default HomePage;
+export default SubscribePage;
 
 export const getServerSideProps: GetServerSideProps<{
   data: BloodSupply[];

@@ -35,6 +35,10 @@ NOTE: all bebnefits here are related to future auth functionality
   - get user 
   - get users subscription status 
   - longer load 
+- csr
+  - when actually subscribe, we render something only on the client side
+
+
 
 
 
@@ -49,7 +53,9 @@ TODO - get access to
 # questions 
 1. what is that map showing?
 - locations of places to donate blod in the city?
-- how to handle errors in get static props 
+- how to handle errors in get static props
+  - validation for instance 
+  - or bad response from fetch received
 
 ... TODO 
 1. create folder structure for getting data 
@@ -65,3 +71,7 @@ TODO - get access to
 - for avoiding potentual issues with future auth
 - create feature for subscribe 
 - ui service there would be a hook again, to subscribe - same shape as that hook with state in blood supplies
+6. setup ui and logic for subscribing
+- feature 
+- repo 
+...

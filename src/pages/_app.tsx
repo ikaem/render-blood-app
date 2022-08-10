@@ -8,16 +8,19 @@ function MyApp({ Component, pageProps }) {
         style={{
           display: 'flex',
           flexDirection: 'row',
+          gap: '1rem',
+          padding: 0,
         }}
-
-        
       >
-
-
-<Link href={}>
-</Link>
-
-
+        <Link href={'/'} passHref>
+          <a>Home</a>
+        </Link>
+        <Link href={'/subscribe'} passHref>
+          <a>Subscribe</a>
+        </Link>
+        <Link href={'/about'} passHref>
+          <a>About</a>
+        </Link>
       </ul>
 
       <Component {...pageProps} />

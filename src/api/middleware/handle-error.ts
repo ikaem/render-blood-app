@@ -1,25 +1,25 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { ErrorHandler } from 'next-connect';
+import { NextFunction, Request, Response } from 'express';
+import { CustomError } from '../../models/errors/custom-error';
 
-export const handleError: ErrorHandler<NextApiRequest, NextApiResponse> = (
-  err,
-  req,
-  res,
-  next
+export const errorHandler = (
+  err: Error,
+  req: Request,
+  res: Response,
+  _next: NextFunction
 ) => {
-  console.log('this is error:', err);
+  // TODO here we should use some logging solution
+  console.error('Somethig went wrong:', err);
 
-  if (err instanceof Error) {
-    res.status(401).json({
-      ok: false,
-      error: 'You are not authorized',
-    });
-
+  if (err instanceof CustomError) {
+    res.status(err.statusCode).json({ errors: err.serializeErrors() });
     return;
   }
 
-  res.status(500).json({
-    ok: false,
-    error: 'something went wrong',
+  res.status(400).json({
+    errors: [
+      {
+        message: 'Something went wrong',
+      },
+    ],
   });
 };
