@@ -6,6 +6,8 @@ export const subscribe: NextApiHandler = async (req: NextApiRequest, res) => {
   // use express validator for this
   const { email, city, bloodGroup } = req.body;
 
+  console.log({ body: req.body });
+
   const result = await subscriptionApiService.createSubscription({
     email,
     city,

@@ -1,5 +1,9 @@
 import { BloodSuppliesRepository } from '../data/blood-supplies.repository';
-import { bloodSuppliesRepositoryProvider } from '../data/blood-supplies.repository-provider';
+import {
+  bloodSuppliesFirebaseRepositoryProvider,
+  bloodSuppliesJsonServerRepositoryProvider,
+} from '../data/blood-supplies.repository-provider';
+import { bloodSuppliesFirebaseRepository } from '../data/repositories/firebase/blood-supplies.firebase-repository';
 
 class BloodSupplyApiService {
   constructor(
@@ -28,5 +32,6 @@ class BloodSupplyApiService {
 }
 
 export const bloodSupplyApiService = new BloodSupplyApiService(
-  bloodSuppliesRepositoryProvider
+  // bloodSuppliesJsonServerRepositoryProvider
+  bloodSuppliesFirebaseRepositoryProvider
 );

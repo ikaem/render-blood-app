@@ -1,14 +1,20 @@
-import { bloodSuppliesRepositoryProvider } from '../../../blood-supplies/api/data/blood-supplies.repository-provider';
+import { bloodSuppliesJsonServerRepositoryProvider } from '../../../blood-supplies/api/data/blood-supplies.repository-provider';
+import { subscriptionFirebaseRepository } from '../data/repositories/firebase/subscription.firebase.repository';
 import {
   SubscriptionCreateOneArgs,
   SubscriptionRepository,
 } from '../data/repositories/subscription.repository';
-import { subscriptionRepositoryProvider } from '../data/repositories/subscription.repository-provider';
+import {
+  subscriptionFirebaseRepositoryProvider,
+  subscriptionJsonServerRepositoryProvider,
+} from '../data/repositories/subscription.repository-provider';
 
 class SubscriptionApiService {
   constructor(private subscriptionRepositoryProvider: SubscriptionRepository) {}
 
   createSubscription = async (args: SubscriptionCreateOneArgs) => {
+    console.log({ args });
+
     try {
       const data = await this.subscriptionRepositoryProvider.createOne(args);
 
@@ -30,5 +36,6 @@ class SubscriptionApiService {
 }
 
 export const subscriptionApiService = new SubscriptionApiService(
-  subscriptionRepositoryProvider
+  // subscriptionJsonServerRepositoryProvider
+  subscriptionFirebaseRepositoryProvider
 );

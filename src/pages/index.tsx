@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { bloodSupplyApiService } from '../features/blood-supplies/api/api-services/blood-supply.api-service';
-import { bloodSuppliesRepositoryProvider } from '../features/blood-supplies/api/data/blood-supplies.repository-provider';
+import { bloodSuppliesJsonServerRepositoryProvider } from '../features/blood-supplies/api/data/blood-supplies.repository-provider';
 import { BloodSupply } from '../features/blood-supplies/models/bloor-supply';
 import styles from '../styles/Home.module.css';
 

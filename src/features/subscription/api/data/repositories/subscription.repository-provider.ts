@@ -1,3 +1,4 @@
+import { subscriptionFirebaseRepository } from './firebase/subscription.firebase.repository';
 import { subscriptionJsonServerRepository } from './json-server/subscription.json-server.repository';
 import {
   Subscription,
@@ -21,5 +22,8 @@ class SubscriptionRepositoryProvider implements SubscriptionRepository {
   };
 }
 
-export const subscriptionRepositoryProvider =
+export const subscriptionJsonServerRepositoryProvider =
   new SubscriptionRepositoryProvider(subscriptionJsonServerRepository);
+
+export const subscriptionFirebaseRepositoryProvider =
+  new SubscriptionRepositoryProvider(subscriptionFirebaseRepository);

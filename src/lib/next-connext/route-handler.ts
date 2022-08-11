@@ -1,6 +1,6 @@
-import nextConnect from "next-connect";
-import { handleError } from "../../api/middleware/handle-error";
+import nextConnect from 'next-connect';
+import { errorHandler } from '../../api/middleware/handle-error';
 
 export const routeHandler = nextConnect({
-  onError: handleError
-})
+  onError: errorHandler,
+});
