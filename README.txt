@@ -4,14 +4,17 @@
 - static page - !! this 
 
 ## home page
-- has map 
+- has map - valjda
 - has list of cities with blood statuses 
 - no images 
 - potentually little seo content in form of data information about cities blood requirements 
+  - head
+  - meta itd...
 
 ### options 
 - client side rendering completely after getting data 
   - would need to expose request and received data in the browser?
+  - no SEO benefit at all
 - ssr
   - get data on server - no exposing of request and received data on browser 
   - some contribution to SEO still 
@@ -21,6 +24,7 @@
   - potentially good SEO contribution 
   - can use isr to revalidate every 24 of 12 hours (this is how often web is scraped for new data anyhow)
   - filtering of data can be done on the state already in the app, not by requesting data from server every time 
+  - csr - map
 
 ### what is that map showing 
 

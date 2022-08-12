@@ -3,7 +3,7 @@ import { BloodSuppliesRepository } from './blood-supplies.repository';
 import { bloodSuppliesFirebaseRepository } from './repositories/firebase/blood-supplies.firebase-repository';
 import { bloodSuppliesJsonServerRepository } from './repositories/json-server/blood-supplies.json-server-repository';
 
-class BloodSuppliesRepositoryProvider implements BloodSuppliesRepository {
+export class BloodSuppliesRepositoryProvider implements BloodSuppliesRepository {
   private repository: BloodSuppliesRepository;
 
   constructor(repository: BloodSuppliesRepository) {
@@ -18,8 +18,26 @@ class BloodSuppliesRepositoryProvider implements BloodSuppliesRepository {
 }
 
 // we can now instantiate provider with any repository that we want that matches interface
-export const bloodSuppliesJsonServerRepositoryProvider =
-  new BloodSuppliesRepositoryProvider(bloodSuppliesJsonServerRepository);
+// export const bloodSuppliesJsonServerRepositoryProvider =
+//   new BloodSuppliesRepositoryProvider(bloodSuppliesJsonServerRepository);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const bloodSuppliesFirebaseRepositoryProvider =
   new BloodSuppliesRepositoryProvider(bloodSuppliesFirebaseRepository);
